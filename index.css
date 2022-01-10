@@ -1,0 +1,89 @@
+ @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 100vw;
+	font-family: Nunito, sans-serif;
+}
+
+button {
+	font-family: Nunito, sans-serif;
+}
+
+input {
+	font-family: monospace;
+	padding: 5px;
+	border: none;
+	border-bottom: 1px solid lightgray;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	width: 8em;
+}
+
+.settings-link {
+		position: fixed;
+		top: 0;
+		right: 0;
+		padding: 20px;
+}
+
+@media only screen and (min-width: 1100px) {
+  .settings-link {
+		opacity: 0;
+	}
+
+	.settings-link:hover {
+		opacity: 1;
+	}
+}
+
+.settings {
+	visibility: hidden;
+	background-color: white;
+	width: 300px;
+	position: fixed;
+	padding: 20px;
+	margin-left: calc(50% - (300px / 2));
+	border-radius: 5px;
+	text-align: center;
+	margin-top: 50px;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+	/*^ https://codepen.io/sdthornton/pen/wBZdXq*/
+}
+
+
+svg {
+	width: 100vw;
+	height: 200px;
+	top: calc(100vh - 50px);
+	position: fixed;
+	overflow: visible;
+}
+
+#canvas {
+	background-color: darkblue;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+
+.snow {
+    position: absolute;
+    border-radius: 50%;
+    left: var(--x);
+    top: var(--y);
+}
+
+@keyframes snowfall-x {
+  to {
+    left: calc(var(--x) + var(--x-travel));
+  }
+}
+
+@keyframes snowfall-y {
+  to {
+    top: 100%;
+  }
+}

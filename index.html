@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>snow!!!!!</title>
+</head>
+
+<body>
+  <div class="settings-link">
+    <button onclick="showSettings()">Settings</button>
+  </div>
+  <div id="settings" class="settings">
+      <label for="sky-gradient-1">Sky gradient 1:</label><br>
+      <input type="text" id="sky-gradient-1" name="sky-gradient-1"><br>
+      <label for="sky-gradient-2">Sky gradient 2:</label><br>
+      <input type="text" id="sky-gradient-2" name="sky-gradient-2"><br>
+      <label for="snow-color">Snow color:</label><br>
+      <input type="text" id="snow-color" name="snow-color"><br>
+      <button onclick="handleSettingsSubmit()">OK</button>
+  </div>
+  <div id="canvas" onclick="hideSettings()">
+    <svg id="dunes" viewBox="0 0 3000 400">
+    </svg>
+  </div>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
